@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isManichaean;
+'use strict';
 
-  REGEX = /^(?:\u0640|\uD802[\uDEC0-\uDEE6\uDEEB-\uDEF6])+$/;
+(() => {
+  const REGEX = /^(?:\u0640|\uD802[\uDEC0-\uDEE6\uDEEB-\uDEF6])+$/;
 
-  isManichaean = function(value) {
+  const isManichaean = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isManichaean
 
+  // export isManichaean as commonjs module
   module.exports = isManichaean;
-
-}).call(this);
+})(); // end IIFE
