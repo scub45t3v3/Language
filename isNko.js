@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isNko;
+'use strict';
 
-  REGEX = /^[\u07C0-\u07FA]+$/;
+(() => {
+  const REGEX = /^[\u07C0-\u07FA]+$/;
 
-  isNko = function(value) {
+  const isNko = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isNko
 
+  // export isNko as commonjs module
   module.exports = isNko;
-
-}).call(this);
+})(); // end IIFE
