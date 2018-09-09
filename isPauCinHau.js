@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isPauCinHau;
+'use strict';
 
-  REGEX = /^(?:\uD806[\uDEC0-\uDEF8])+$/;
+(() => {
+  const REGEX = /^(?:\uD806[\uDEC0-\uDEF8])+$/;
 
-  isPauCinHau = function(value) {
+  const isPauCinHau = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isPauCinHau
 
+  // export isPauCinHau as commonjs module
   module.exports = isPauCinHau;
-
-}).call(this);
+})(); // end IIFE
