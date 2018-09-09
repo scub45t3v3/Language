@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isCherokee;
+'use strict';
 
-  REGEX = /^[\u13A0-\u13F5\u13F8-\u13FD\uAB70-\uABBF]+$/;
+(() => {
+  const REGEX = /^[\u13A0-\u13F5\u13F8-\u13FD\uAB70-\uABBF]+$/;
 
-  isCherokee = function(value) {
+  const isCherokee = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isCherokee
 
+  // export isCherokee as commonjs module
   module.exports = isCherokee;
-
-}).call(this);
+})(); // end IIFE
