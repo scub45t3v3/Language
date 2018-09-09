@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isAvestan;
+'use strict';
 
-  REGEX = /^(?:\uD802[\uDF00-\uDF35\uDF39-\uDF3F])+$/;
+(() => {
+  const REGEX = /^(?:\uD802[\uDF00-\uDF35\uDF39-\uDF3F])+$/;
 
-  isAvestan = function(value) {
+  const isAvestan = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isAvestan
 
+  // export isAvestan as commonjs module
   module.exports = isAvestan;
-
-}).call(this);
+})(); // end IIFE
