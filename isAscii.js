@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isAscii;
+'use strict';
 
-  REGEX = /^[\x00-\x7F]+$/;
+(() => {
+  const REGEX = /^[\x00-\x7F]+$/;
 
-  isAscii = function(value) {
+  const isAscii = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isAscii
 
+  // export isAscii as commonjs module
   module.exports = isAscii;
-
-}).call(this);
+})(); // end IIFE
