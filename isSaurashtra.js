@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isSaurashtra;
+'use strict';
 
-  REGEX = /^[\uA880-\uA8C5\uA8CE-\uA8D9]+$/;
+(() => {
+  const REGEX = /^[\uA880-\uA8C5\uA8CE-\uA8D9]+$/;
 
-  isSaurashtra = function(value) {
+  const isSaurashtra = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isSaurashtra
 
+  // export isSaurashtra as commonjs module
   module.exports = isSaurashtra;
-
-}).call(this);
+})(); // end IIFE
