@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isKhojki;
+'use strict';
 
-  REGEX = /^(?:[\u0AE6-\u0AEF]|\uD804[\uDE00-\uDE11\uDE13-\uDE3E])+$/;
+(() => {
+  const REGEX = /^(?:[\u0AE6-\u0AEF]|\uD804[\uDE00-\uDE11\uDE13-\uDE3E])+$/;
 
-  isKhojki = function(value) {
+  const isKhojki = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isKhojki
 
+  // export isKhojki as commonjs module
   module.exports = isKhojki;
-
-}).call(this);
+})(); // end IIFE
