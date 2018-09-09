@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isRejang;
+'use strict';
 
-  REGEX = /^[\uA930-\uA953\uA95F]+$/;
+(() => {
+  const REGEX = /^[\uA930-\uA953\uA95F]+$/;
 
-  isRejang = function(value) {
+  const isRejang = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isRejang
 
+  // export isRejang as commonjs module
   module.exports = isRejang;
-
-}).call(this);
+})(); // end IIFE
