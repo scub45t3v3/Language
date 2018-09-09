@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isOldSouthArabian;
+'use strict';
 
-  REGEX = /^(?:\uD802[\uDE60-\uDE7F])+$/;
+(() => {
+  const REGEX = /^(?:\uD802[\uDE60-\uDE7F])+$/;
 
-  isOldSouthArabian = function(value) {
+  const isOldSouthArabian = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isOldSouthArabian
 
+  // export isOldSouthArabian as commonjs module
   module.exports = isOldSouthArabian;
-
-}).call(this);
+})(); // end IIFE
