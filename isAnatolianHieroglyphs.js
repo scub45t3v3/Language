@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isAnatolianHieroglyphs;
+'use strict';
 
-  REGEX = /^(?:\uD811[\uDC00-\uDE46])+$/;
+(() => {
+  const REGEX = /^(?:\uD811[\uDC00-\uDE46])+$/;
 
-  isAnatolianHieroglyphs = function(value) {
+  const isAnatolianHieroglyphs = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isAnatolianHieroglyphs
 
+  // export isAnatolianHieroglyphs as commonjs module
   module.exports = isAnatolianHieroglyphs;
-
-}).call(this);
+})(); // end IIFE
