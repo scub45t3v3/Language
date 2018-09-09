@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isMiao;
+'use strict';
 
-  REGEX = /^(?:\uD81B[\uDF00-\uDF44\uDF50-\uDF7E\uDF8F-\uDF9F])+$/;
+(() => {
+  const REGEX = /^(?:\uD81B[\uDF00-\uDF44\uDF50-\uDF7E\uDF8F-\uDF9F])+$/;
 
-  isMiao = function(value) {
+  const isMiao = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isMiao
 
+  // export isMiao as commonjs module
   module.exports = isMiao;
-
-}).call(this);
+})(); // end IIFE
