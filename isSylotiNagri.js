@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isSylotiNagri;
+'use strict';
 
-  REGEX = /^[\u0964\u0965\u09E6-\u09EF\uA800-\uA82B]+$/;
+(() => {
+  const REGEX = /^[\u0964\u0965\u09E6-\u09EF\uA800-\uA82B]+$/;
 
-  isSylotiNagri = function(value) {
+  const isSylotiNagri = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isSylotiNagri
 
+  // export isSylotiNagri as commonjs module
   module.exports = isSylotiNagri;
-
-}).call(this);
+})(); // end IIFE
