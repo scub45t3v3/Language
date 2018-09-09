@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isCuneiform;
+'use strict';
 
-  REGEX = /^(?:\uD808[\uDC00-\uDF99]|\uD809[\uDC00-\uDC6E\uDC70-\uDC74\uDC80-\uDD43])+$/;
+(() => {
+  const REGEX = /^(?:\uD808[\uDC00-\uDF99]|\uD809[\uDC00-\uDC6E\uDC70-\uDC74\uDC80-\uDD43])+$/;
 
-  isCuneiform = function(value) {
+  const isCuneiform = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isCuneiform
 
+  // export isCuneiform as commonjs module
   module.exports = isCuneiform;
-
-}).call(this);
+})(); // end IIFE
