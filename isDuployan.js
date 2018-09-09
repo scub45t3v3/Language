@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isDuployan;
+'use strict';
 
-  REGEX = /^(?:\uD82F[\uDC00-\uDC6A\uDC70-\uDC7C\uDC80-\uDC88\uDC90-\uDC99\uDC9C-\uDCA3])+$/;
+(() => {
+  const REGEX = /^(?:\uD82F[\uDC00-\uDC6A\uDC70-\uDC7C\uDC80-\uDC88\uDC90-\uDC99\uDC9C-\uDCA3])+$/;
 
-  isDuployan = function(value) {
+  const isDuployan = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isDuployan
 
+  // export isDuployan as commonjs module
   module.exports = isDuployan;
-
-}).call(this);
+})(); // end IIFE
