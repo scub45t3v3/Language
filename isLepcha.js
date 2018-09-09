@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isLepcha;
+'use strict';
 
-  REGEX = /^[\u1C00-\u1C37\u1C3B-\u1C49\u1C4D-\u1C4F]+$/;
+(() => {
+  const REGEX = /^[\u1C00-\u1C37\u1C3B-\u1C49\u1C4D-\u1C4F]+$/;
 
-  isLepcha = function(value) {
+  const isLepcha = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isLepcha
 
+  // export isLepcha as commonjs module
   module.exports = isLepcha;
-
-}).call(this);
+})(); // end IIFE
