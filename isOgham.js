@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isOgham;
+'use strict';
 
-  REGEX = /^[\u1680-\u169C]+$/;
+(() => {
+  const REGEX = /^[\u1680-\u169C]+$/;
 
-  isOgham = function(value) {
+  const isOgham = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isOgham
 
+  // export isOgham as commonjs module
   module.exports = isOgham;
-
-}).call(this);
+})(); // end IIFE
