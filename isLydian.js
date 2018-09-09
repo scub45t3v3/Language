@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isLydian;
+'use strict';
 
-  REGEX = /^(?:\uD802[\uDD20-\uDD39\uDD3F])+$/;
+(() => {
+  const REGEX = /^(?:\uD802[\uDD20-\uDD39\uDD3F])+$/;
 
-  isLydian = function(value) {
+  const isLydian = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isLydian
 
+  // export isLydian as commonjs module
   module.exports = isLydian;
-
-}).call(this);
+})(); // end IIFE
