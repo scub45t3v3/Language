@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isOsage;
+'use strict';
 
-  REGEX = /^(?:\uD801[\uDCB0-\uDCD3\uDCD8-\uDCFB])+$/;
+(() => {
+  const REGEX = /^(?:\uD801[\uDCB0-\uDCD3\uDCD8-\uDCFB])+$/;
 
-  isOsage = function(value) {
+  const isOsage = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isOsage
 
+  // export isOsage as commonjs module
   module.exports = isOsage;
-
-}).call(this);
+})(); // end IIFE
