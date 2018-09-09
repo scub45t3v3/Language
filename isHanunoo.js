@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isHanunoo;
+'use strict';
 
-  REGEX = /^[\u1720-\u1736]+$/;
+(() => {
+  const REGEX = /^[\u1720-\u1736]+$/;
 
-  isHanunoo = function(value) {
+  const isHanunoo = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isHanunoo
 
+  // export isHanunoo as commonjs module
   module.exports = isHanunoo;
-
-}).call(this);
+})(); // end IIFE
