@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isNabataean;
+'use strict';
 
-  REGEX = /^(?:\uD802[\uDC80-\uDC9E\uDCA7-\uDCAF])+$/;
+(() => {
+  const REGEX = /^(?:\uD802[\uDC80-\uDC9E\uDCA7-\uDCAF])+$/;
 
-  isNabataean = function(value) {
+  const isNabataean = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isNabataean
 
+  // export isNabataean as commonjs module
   module.exports = isNabataean;
-
-}).call(this);
+})(); // end IIFE
