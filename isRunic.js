@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isRunic;
+'use strict';
 
-  REGEX = /^[\u16A0-\u16EA\u16EE-\u16F8]+$/;
+(() => {
+  const REGEX = /^[\u16A0-\u16EA\u16EE-\u16F8]+$/;
 
-  isRunic = function(value) {
+  const isRunic = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isRunic
 
+  // export isRunic as commonjs module
   module.exports = isRunic;
-
-}).call(this);
+})(); // end IIFE
