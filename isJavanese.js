@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isJavanese;
+'use strict';
 
-  REGEX = /^[\uA980-\uA9CD\uA9CF-\uA9D9\uA9DE\uA9DF]+$/;
+(() => {
+  const REGEX = /^[\uA980-\uA9CD\uA9CF-\uA9D9\uA9DE\uA9DF]+$/;
 
-  isJavanese = function(value) {
+  const isJavanese = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isJavanese
 
+  // export isJavanese as commonjs module
   module.exports = isJavanese;
-
-}).call(this);
+})(); // end IIFE
