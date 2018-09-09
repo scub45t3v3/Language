@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isShavian;
+'use strict';
 
-  REGEX = /^(?:\uD801[\uDC50-\uDC7F])+$/;
+(() => {
+  const REGEX = /^(?:\uD801[\uDC50-\uDC7F])+$/;
 
-  isShavian = function(value) {
+  const isShavian = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isShavian
 
+  // export isShavian as commonjs module
   module.exports = isShavian;
-
-}).call(this);
+})(); // end IIFE
