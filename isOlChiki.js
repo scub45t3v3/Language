@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isOlChiki;
+'use strict';
 
-  REGEX = /^(?:\uD802[\uDD20-\uDD39\uDD3F])+$/;
+(() => {
+  const REGEX = /^(?:\uD802[\uDD20-\uDD39\uDD3F])+$/;
 
-  isOlChiki = function(value) {
+  const isOlChiki = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isOlChiki
 
+  // export isOlChiki as commonjs module
   module.exports = isOlChiki;
-
-}).call(this);
+})(); // end IIFE
