@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isMandaic;
+'use strict';
 
-  REGEX = /^[\u0640\u0840-\u085B\u085E]+$/;
+(() => {
+  const REGEX = /^[\u0640\u0840-\u085B\u085E]+$/;
 
-  isMandaic = function(value) {
+  const isMandaic = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isMandaic
 
+  // export isMandaic as commonjs module
   module.exports = isMandaic;
-
-}).call(this);
+})(); // end IIFE
