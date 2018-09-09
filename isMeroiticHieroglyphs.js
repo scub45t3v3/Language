@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isMeroiticHieroglyphs;
+'use strict';
 
-  REGEX = /^(?:\uD802[\uDD80-\uDD9F])+$/;
+(() => {
+  const REGEX = /^(?:\uD802[\uDD80-\uDD9F])+$/;
 
-  isMeroiticHieroglyphs = function(value) {
+  const isMeroiticHieroglyphs = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isMeroiticHieroglyphs
 
+  // export isMeroiticHieroglyphs as commonjs module
   module.exports = isMeroiticHieroglyphs;
-
-}).call(this);
+})(); // end IIFE
