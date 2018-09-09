@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isUgaritic;
+'use strict';
 
-  REGEX = /^(?:\uD800[\uDF80-\uDF9D\uDF9F])+$/;
+(() => {
+  const REGEX = /^(?:\uD800[\uDF80-\uDF9D\uDF9F])+$/;
 
-  isUgaritic = function(value) {
+  const isUgaritic = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isUgaritic
 
+  // export isUgaritic as commonjs module
   module.exports = isUgaritic;
-
-}).call(this);
+})(); // end IIFE
