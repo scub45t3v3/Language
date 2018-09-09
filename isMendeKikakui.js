@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isMendeKikakui;
+'use strict';
 
-  REGEX = /^(?:\uD83A[\uDC00-\uDCC4\uDCC7-\uDCD6])+$/;
+(() => {
+  const REGEX = /^(?:\uD83A[\uDC00-\uDCC4\uDCC7-\uDCD6])+$/;
 
-  isMendeKikakui = function(value) {
+  const isMendeKikakui = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isMendeKikakui
 
+  // export isMendeKikakui as commonjs module
   module.exports = isMendeKikakui;
-
-}).call(this);
+})(); // end IIFE
