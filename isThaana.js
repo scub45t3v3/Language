@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isThaana;
+'use strict';
 
-  REGEX = /^[\u060C\u061B\u061F\u0660-\u0669\u0780-\u07B1\uFDF2\uFDFD]+$/;
+(() => {
+  const REGEX = /^[\u060C\u061B\u061F\u0660-\u0669\u0780-\u07B1\uFDF2\uFDFD]+$/;
 
-  isThaana = function(value) {
+  const isThaana = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isThaana
 
+  // export isThaana as commonjs module
   module.exports = isThaana;
-
-}).call(this);
+})(); // end IIFE
