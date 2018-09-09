@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isEgyptianHieroglyphs;
+'use strict';
 
-  REGEX = /^(?:\uD80C[\uDC00-\uDFFF]|\uD80D[\uDC00-\uDC2E])+$/;
+(() => {
+  const REGEX = /^(?:\uD80C[\uDC00-\uDFFF]|\uD80D[\uDC00-\uDC2E])+$/;
 
-  isEgyptianHieroglyphs = function(value) {
+  const isEgyptianHieroglyphs = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isEgyptianHieroglyphs
 
+  // export isEgyptianHieroglyphs as commonjs module
   module.exports = isEgyptianHieroglyphs;
-
-}).call(this);
+})(); // end IIFE
