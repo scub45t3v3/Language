@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isAhom;
+'use strict';
 
-  REGEX = /^(?:\uD805[\uDF00-\uDF19\uDF1D-\uDF2B\uDF30-\uDF3F])+$/;
+(() => {
+  const REGEX = /^(?:\uD805[\uDF00-\uDF19\uDF1D-\uDF2B\uDF30-\uDF3F])+$/;
 
-  isAhom = function(value) {
+  const isAhom = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isAhom
 
+  // export isAhom as commonjs module
   module.exports = isAhom;
-
-}).call(this);
+})(); // end IIFE
