@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isThai;
+'use strict';
 
-  REGEX = /^[\u0E01-\u0E3A\u0E40-\u0E5B]+$/;
+(() => {
+  const REGEX = /^[\u0E01-\u0E3A\u0E40-\u0E5B]+$/;
 
-  isThai = function(value) {
+  const isThai = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isThai
 
+  // export isThai as commonjs module
   module.exports = isThai;
-
-}).call(this);
+})(); // end IIFE
