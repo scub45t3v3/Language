@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isImperialAramaic;
+'use strict';
 
-  REGEX = /^(?:\uD802[\uDC40-\uDC55\uDC57-\uDC5F])+$/;
+(() => {
+  const REGEX = /^(?:\uD802[\uDC40-\uDC55\uDC57-\uDC5F])+$/;
 
-  isImperialAramaic = function(value) {
+  const isImperialAramaic = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isImperialAramaic
 
+  // export isImperialAramaic as commonjs module
   module.exports = isImperialAramaic;
-
-}).call(this);
+})(); // end IIFE
