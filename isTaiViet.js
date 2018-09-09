@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isTaiViet;
+'use strict';
 
-  REGEX = /^[\uAA80-\uAAC2\uAADB-\uAADF]+$/;
+(() => {
+  const REGEX = /^[\uAA80-\uAAC2\uAADB-\uAADF]+$/;
 
-  isTaiViet = function(value) {
+  const isTaiViet = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isTaiViet
 
+  // export isTaiViet as commonjs module
   module.exports = isTaiViet;
-
-}).call(this);
+})(); // end IIFE
