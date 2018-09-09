@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isCaucasianAlbanian;
+'use strict';
 
-  REGEX = /^(?:\uD801[\uDD30-\uDD63\uDD6F])+$/;
+(() => {
+  const REGEX = /^(?:\uD801[\uDD30-\uDD63\uDD6F])+$/;
 
-  isCaucasianAlbanian = function(value) {
+  const isCaucasianAlbanian = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isCaucasianAlbanian
 
+  // export isCaucasianAlbanian as commonjs module
   module.exports = isCaucasianAlbanian;
-
-}).call(this);
+})(); // end IIFE
