@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isMyanmar;
+'use strict';
 
-  REGEX = /^[\u1000-\u109F\uA92E\uA9E0-\uA9FE\uAA60-\uAA7F]+$/;
+(() => {
+  const REGEX = /^[\u1000-\u109F\uA92E\uA9E0-\uA9FE\uAA60-\uAA7F]+$/;
 
-  isMyanmar = function(value) {
+  const isMyanmar = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isMyanmar
 
+  // export isMyanmar as commonjs module
   module.exports = isMyanmar;
-
-}).call(this);
+})(); // end IIFE
