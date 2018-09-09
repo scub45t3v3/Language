@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isPalmyrene;
+'use strict';
 
-  REGEX = /^(?:\uD802[\uDC60-\uDC7F])+$/;
+(() => {
+  const REGEX = /^(?:\uD802[\uDC60-\uDC7F])+$/;
 
-  isPalmyrene = function(value) {
+  const isPalmyrene = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isPalmyrene
 
+  // export isPalmyrene as commonjs module
   module.exports = isPalmyrene;
-
-}).call(this);
+})(); // end IIFE
