@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isTagbanwa;
+'use strict';
 
-  REGEX = /^[\u1735\u1736\u1760-\u176C\u176E-\u1770\u1772\u1773]+$/;
+(() => {
+  const REGEX = /^[\u1735\u1736\u1760-\u176C\u176E-\u1770\u1772\u1773]+$/;
 
-  isTagbanwa = function(value) {
+  const isTagbanwa = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isTagbanwa
 
+  // export isTagbanwa as commonjs module
   module.exports = isTagbanwa;
-
-}).call(this);
+})(); // end IIFE
