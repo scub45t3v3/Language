@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isCarian;
+'use strict';
 
-  REGEX = /^(?:\uD800[\uDEA0-\uDED0])+$/;
+(() => {
+  const REGEX = /^(?:\uD800[\uDEA0-\uDED0])+$/;
 
-  isCarian = function(value) {
+  const isCarian = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isCarian
 
+  // export isCarian as commonjs module
   module.exports = isCarian;
-
-}).call(this);
+})(); // end IIFE
