@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isGothic;
+'use strict';
 
-  REGEX = /^(?:\uD800[\uDF30-\uDF4A])+$/;
+(() => {
+  const REGEX = /^(?:\uD800[\uDF30-\uDF4A])+$/;
 
-  isGothic = function(value) {
+  const isGothic = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isGothic
 
+  // export isGothic as commonjs module
   module.exports = isGothic;
-
-}).call(this);
+})(); // end IIFE
