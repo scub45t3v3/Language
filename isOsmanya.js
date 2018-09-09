@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isOsmanya;
+'use strict';
 
-  REGEX = /^(?:\uD801[\uDC80-\uDC9D\uDCA0-\uDCA9])+$/;
+(() => {
+  const REGEX = /^(?:\uD801[\uDC80-\uDC9D\uDCA0-\uDCA9])+$/;
 
-  isOsmanya = function(value) {
+  const isOsmanya = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isOsmanya
 
+  // export isOsmanya as commonjs module
   module.exports = isOsmanya;
-
-}).call(this);
+})(); // end IIFE
