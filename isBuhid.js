@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isBuhid;
+'use strict';
 
-  REGEX = /^[\u1735\u1736\u1740-\u1753]+$/;
+(() => {
+  const REGEX = /^[\u1735\u1736\u1740-\u1753]+$/;
 
-  isBuhid = function(value) {
+  const isBuhid = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isBuhid
 
+  // export isBuhid as commonjs module
   module.exports = isBuhid;
-
-}).call(this);
+})(); // end IIFE
