@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isModi;
+'use strict';
 
-  REGEX = /^(?:[\uA830-\uA839]|\uD805[\uDE00-\uDE44\uDE50-\uDE59])+$/;
+(() => {
+  const REGEX = /^(?:[\uA830-\uA839]|\uD805[\uDE00-\uDE44\uDE50-\uDE59])+$/;
 
-  isModi = function(value) {
+  const isModi = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isModi
 
+  // export isModi as commonjs module
   module.exports = isModi;
-
-}).call(this);
+})(); // end IIFE
