@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isDeseret;
+'use strict';
 
-  REGEX = /^(?:\uD801[\uDC00-\uDC4F])+$/;
+(() => {
+  const REGEX = /^(?:\uD801[\uDC00-\uDC4F])+$/;
 
-  isDeseret = function(value) {
+  const isDeseret = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isDeseret
 
+  // export isDeseret as commonjs module
   module.exports = isDeseret;
-
-}).call(this);
+})(); // end IIFE
