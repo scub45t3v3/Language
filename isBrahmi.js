@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isBrahmi;
+'use strict';
 
-  REGEX = /^(?:\uD804[\uDC00-\uDC4D\uDC52-\uDC6F\uDC7F])+$/;
+(() => {
+  const REGEX = /^(?:\uD804[\uDC00-\uDC4D\uDC52-\uDC6F\uDC7F])+$/;
 
-  isBrahmi = function(value) {
+  const isBrahmi = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isBrahmi
 
+  // export isBrahmi as commonjs module
   module.exports = isBrahmi;
-
-}).call(this);
+})(); // end IIFE
