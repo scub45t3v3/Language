@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isOldTurkic;
+'use strict';
 
-  REGEX = /^(?:\uD803[\uDC00-\uDC48])+$/;
+(() => {
+  const REGEX = /^(?:\uD803[\uDC00-\uDC48])+$/;
 
-  isOldTurkic = function(value) {
+  const isOldTurkic = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isOldTurkic
 
+  // export isOldTurkic as commonjs module
   module.exports = isOldTurkic;
-
-}).call(this);
+})(); // end IIFE
