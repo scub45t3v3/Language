@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isBassaVah;
+'use strict';
 
-  REGEX = /^(?:\uD81A[\uDED0-\uDEED\uDEF0-\uDEF5])+$/;
+(() => {
+  const REGEX = /^(?:\uD81A[\uDED0-\uDEED\uDEF0-\uDEF5])+$/;
 
-  isBassaVah = function(value) {
+  const isBassaVah = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isBassaVah
 
+  // export isBassaVah as commonjs module
   module.exports = isBassaVah;
-
-}).call(this);
+})(); // end IIFE
