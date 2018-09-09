@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isNewa;
+'use strict';
 
-  REGEX = /^(?:\uD805[\uDC00-\uDC59\uDC5B\uDC5D])+$/;
+(() => {
+  const REGEX = /^(?:\uD805[\uDC00-\uDC59\uDC5B\uDC5D])+$/;
 
-  isNewa = function(value) {
+  const isNewa = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isNewa
 
+  // export isNewa as commonjs module
   module.exports = isNewa;
-
-}).call(this);
+})(); // end IIFE
