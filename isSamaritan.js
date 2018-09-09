@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isSamaritan;
+'use strict';
 
-  REGEX = /^[\u0800-\u082D\u0830-\u083E]+$/;
+(() => {
+  const REGEX = /^[\u0800-\u082D\u0830-\u083E]+$/;
 
-  isSamaritan = function(value) {
+  const isSamaritan = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isSamaritan
 
+  // export isSamaritan as commonjs module
   module.exports = isSamaritan;
-
-}).call(this);
+})(); // end IIFE
