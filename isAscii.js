@@ -1,7 +1,7 @@
 'use strict';
 
 (() => {
-  const REGEX = /^[\x00-\x7F]+$/;
+  const REGEX = /^[\x00-\x7F]+$/; // eslint-disable-line no-control-regex
 
   const isAscii = (value) => {
     return REGEX.test(value);
