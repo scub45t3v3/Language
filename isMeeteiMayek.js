@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isMeeteiMayek;
+'use strict';
 
-  REGEX = /^[\uAAE0-\uAAF6\uABC0-\uABED\uABF0-\uABF9]+$/;
+(() => {
+  const REGEX = /^[\uAAE0-\uAAF6\uABC0-\uABED\uABF0-\uABF9]+$/;
 
-  isMeeteiMayek = function(value) {
+  const isMeeteiMayek = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isMeeteiMayek
 
+  // export isMeeteiMayek as commonjs module
   module.exports = isMeeteiMayek;
-
-}).call(this);
+})(); // end IIFE
