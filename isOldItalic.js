@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isOldItalic;
+'use strict';
 
-  REGEX = /^(?:\uD800[\uDF00-\uDF23])+$/;
+(() => {
+  const REGEX = /^(?:\uD800[\uDF00-\uDF23])+$/;
 
-  isOldItalic = function(value) {
+  const isOldItalic = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isOldItalic
 
+  // export isOldItalic as commonjs module
   module.exports = isOldItalic;
-
-}).call(this);
+})(); // end IIFE
