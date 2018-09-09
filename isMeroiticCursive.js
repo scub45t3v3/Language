@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isMeroiticCursive;
+'use strict';
 
-  REGEX = /^(?:\uD802[\uDDA0-\uDDB7\uDDBC-\uDDCF\uDDD2-\uDDFF])+$/;
+(() => {
+  const REGEX = /^(?:\uD802[\uDDA0-\uDDB7\uDDBC-\uDDCF\uDDD2-\uDDFF])+$/;
 
-  isMeroiticCursive = function(value) {
+  const isMeroiticCursive = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isMeroiticCursive
 
+  // export isMeroiticCursive as commonjs module
   module.exports = isMeroiticCursive;
-
-}).call(this);
+})(); // end IIFE
