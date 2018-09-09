@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isSiddham;
+'use strict';
 
-  REGEX = /^(?:\uD805[\uDD80-\uDDB5\uDDB8-\uDDDD])+$/;
+(() => {
+  const REGEX = /^(?:\uD805[\uDD80-\uDDB5\uDDB8-\uDDDD])+$/;
 
-  isSiddham = function(value) {
+  const isSiddham = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isSiddham
 
+  // export isSiddham as commonjs module
   module.exports = isSiddham;
-
-}).call(this);
+})(); // end IIFE
