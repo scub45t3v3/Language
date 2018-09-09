@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isElbasan;
+'use strict';
 
-  REGEX = /^(?:\uD801[\uDD00-\uDD27])+$/;
+(() => {
+  const REGEX = /^(?:\uD801[\uDD00-\uDD27])+$/;
 
-  isElbasan = function(value) {
+  const isElbasan = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isElbasan
 
+  // export isElbasan as commonjs module
   module.exports = isElbasan;
-
-}).call(this);
+})(); // end IIFE
