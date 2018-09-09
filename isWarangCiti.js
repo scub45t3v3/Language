@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isWarangCiti;
+'use strict';
 
-  REGEX = /^(?:\uD806[\uDCA0-\uDCF2\uDCFF])+$/;
+(() => {
+  const REGEX = /^(?:\uD806[\uDCA0-\uDCF2\uDCFF])+$/;
 
-  isWarangCiti = function(value) {
+  const isWarangCiti = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isWarangCiti
 
+  // export isWarangCiti as commonjs module
   module.exports = isWarangCiti;
-
-}).call(this);
+})(); // end IIFE
