@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isLimbu;
+'use strict';
 
-  REGEX = /^[\u0965\u1900-\u191E\u1920-\u192B\u1930-\u193B\u1940\u1944-\u194F]+$/;
+(() => {
+  const REGEX = /^[\u0965\u1900-\u191E\u1920-\u192B\u1930-\u193B\u1940\u1944-\u194F]+$/;
 
-  isLimbu = function(value) {
+  const isLimbu = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isLimbu
 
+  // export isLimbu as commonjs module
   module.exports = isLimbu;
-
-}).call(this);
+})(); // end IIFE
