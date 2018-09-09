@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isOldNorthArabian;
+'use strict';
 
-  REGEX = /^(?:\uD802[\uDE80-\uDE9F])+$/;
+(() => {
+  const REGEX = /^(?:\uD802[\uDE80-\uDE9F])+$/;
 
-  isOldNorthArabian = function(value) {
+  const isOldNorthArabian = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isOldNorthArabian
 
+  // export isOldNorthArabian as commonjs module
   module.exports = isOldNorthArabian;
-
-}).call(this);
+})(); // end IIFE
