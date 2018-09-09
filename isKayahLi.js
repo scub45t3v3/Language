@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isKayahLi;
+'use strict';
 
-  REGEX = /^[\uA900-\uA92F]+$/;
+(() => {
+  const REGEX = /^[\uA900-\uA92F]+$/;
 
-  isKayahLi = function(value) {
+  const isKayahLi = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isKayahLi
 
+  // export isKayahLi as commonjs module
   module.exports = isKayahLi;
-
-}).call(this);
+})(); // end IIFE
