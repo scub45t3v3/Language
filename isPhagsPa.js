@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isPhagsPa;
+'use strict';
 
-  REGEX = /^[\u1802\u1803\u1805\uA840-\uA877]+$/;
+(() => {
+  const REGEX = /^[\u1802\u1803\u1805\uA840-\uA877]+$/;
 
-  isPhagsPa = function(value) {
+  const isPhagsPa = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isPhagsPa
 
+  // export isPhagsPa as commonjs module
   module.exports = isPhagsPa;
-
-}).call(this);
+})(); // end IIFE
