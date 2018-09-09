@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isLycian;
+'use strict';
 
-  REGEX = /^(?:\uD800[\uDE80-\uDE9C])+$/;
+(() => {
+  const REGEX = /^(?:\uD800[\uDE80-\uDE9C])+$/;
 
-  isLycian = function(value) {
+  const isLycian = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isLycian
 
+  // export isLycian as commonjs module
   module.exports = isLycian;
-
-}).call(this);
+})(); // end IIFE
