@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isLisu;
+'use strict';
 
-  REGEX = /^[\uA4D0-\uA4FF]+$/;
+(() => {
+  const REGEX = /^[\uA4D0-\uA4FF]+$/;
 
-  isLisu = function(value) {
+  const isLisu = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isLisu
 
+  // export isLisu as commonjs module
   module.exports = isLisu;
-
-}).call(this);
+})(); // end IIFE
