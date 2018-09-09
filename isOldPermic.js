@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isOldPermic;
+'use strict';
 
-  REGEX = /^(?:\u0483|\uD800[\uDF50-\uDF7A])+$/;
+(() => {
+  const REGEX = /^(?:\u0483|\uD800[\uDF50-\uDF7A])+$/;
 
-  isOldPermic = function(value) {
+  const isOldPermic = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isOldPermic
 
+  // export isOldPermic as commonjs module
   module.exports = isOldPermic;
-
-}).call(this);
+})(); // end IIFE
