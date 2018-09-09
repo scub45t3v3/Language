@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isVai;
+'use strict';
 
-  REGEX = /^[\uA500-\uA62B]+$/;
+(() => {
+  const REGEX = /^[\uA500-\uA62B]+$/;
 
-  isVai = function(value) {
+  const isVai = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isVai
 
+  // export isVai as commonjs module
   module.exports = isVai;
-
-}).call(this);
+})(); // end IIFE
