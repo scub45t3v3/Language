@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isBraille;
+'use strict';
 
-  REGEX = /^[\u2800-\u28FF]+$/;
+(() => {
+  const REGEX = /^[\u2800-\u28FF]+$/;
 
-  isBraille = function(value) {
+  const isBraille = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isBraille
 
+  // export isBraille as commonjs module
   module.exports = isBraille;
-
-}).call(this);
+})(); // end IIFE
