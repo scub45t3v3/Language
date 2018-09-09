@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isSoraSompeng;
+'use strict';
 
-  REGEX = /^(?:\uD804[\uDCD0-\uDCE8\uDCF0-\uDCF9])+$/;
+(() => {
+  const REGEX = /^(?:\uD804[\uDCD0-\uDCE8\uDCF0-\uDCF9])+$/;
 
-  isSoraSompeng = function(value) {
+  const isSoraSompeng = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isSoraSompeng
 
+  // export isSoraSompeng as commonjs module
   module.exports = isSoraSompeng;
-
-}).call(this);
+})(); // end IIFE
