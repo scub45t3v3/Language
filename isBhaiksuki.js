@@ -1,12 +1,12 @@
-(function() {
-  var REGEX, isBhaiksuki;
+'use strict';
 
-  REGEX = /^(?:\uD807[\uDC00-\uDC08\uDC0A-\uDC36\uDC38-\uDC45\uDC50-\uDC6C])+$/;
+(() => {
+  const REGEX = /^(?:\uD807[\uDC00-\uDC08\uDC0A-\uDC36\uDC38-\uDC45\uDC50-\uDC6C])+$/;
 
-  isBhaiksuki = function(value) {
+  const isBhaiksuki = (value) => {
     return REGEX.test(value);
-  };
+  }; // end isBhaiksuki
 
+  // export isBhaiksuki as commonjs module
   module.exports = isBhaiksuki;
-
-}).call(this);
+})(); // end IIFE
